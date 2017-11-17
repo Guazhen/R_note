@@ -1,0 +1,36 @@
+第一章：
+一、R语言的数据类型
+	1）常用的R对象
+	1、向量 2、列表 3、矩阵 4、数组 5、因子 6、数据帧
+
+	2）原子向量（6类）
+	数据类型 	示例 	验证代码 	                输出结果
+
+	逻辑 	TRUE, FALSE 	v <- TRUE ; print(class(v)); 	[1] "logical"
+	数字值 	12.3, 5, 999 	v <- 23.5 ; print(class(v)); 	[1] "numeric"
+	整数 	2L, 34L, 0L 	v <- 2L ; print(class(v)); 	[1] "integer"
+	复数 	3 + 2i 	v <- 2+5i ; print(class(v)); 	        [1] "complex"
+	字符 	‘a’ , ‘“good”, “TRUE”, ‘23.4’ 	v <- "TRUE" ; print(class(v)); 	[1] "character"
+	原生 	"Hello"存储值为： 48 65 6c 6c 6f 	v <- charToRaw("Hello"); print(class(v)); 	[1] "raw"
+
+	3）向量
+	当要创建具有多个元素的向量时，应该使用c()函数，表示将元素组合成一个向量
+	# Create a vector.
+	apple <- c('red','green',"yellow");
+	print(apple);
+
+	# Get the class of the vector.
+	print(class(apple));
+
+	4）标量、向量、数组与矩阵
+	   
+	  4.1）R中的向量时连续存储的，因此不能直接的插入或是删除元素。（想要添加或是删除元素，需要重新给向量赋值）：如下例子：
+		> x<-c(88,2,12,32)
+		> x<-c(x[1:3],168,x[4])
+		> x
+		[1]  88   2  12 168  32
+		> 
+
+	   4.2）获取向量长度(length())
+		
+		
