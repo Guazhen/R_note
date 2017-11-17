@@ -1,0 +1,107 @@
+python笔记
+2017-11-17
+1、type()返回数据项的数据类型：a=1.2 type(a)
+2、命令惯例
+   1）以单一下划线开变量名(_x)不会被from module import *语句导入
+   2）前后下划线的变量名是系统定义的变量
+   3）两个下划线开头（__X）时类的本地变量
+
+注意：变量名没有类型，对象才有
+
+3、组合数据类型
+   1）序列类型
+     列表   元组   字符串也属于序列类型
+ 
+   2）集合类型  集合
+   3）映射类型  字典
+
+注意：列表本身可以修改，可以在原处修改
+
+4、实质上，列表和元组并不真正存储数据，而是存放对象引用
+
+5、python提供了4组逻辑运算
+   1）身份操作符：is (判断左端对象引用是否相同与右端对象引用）
+   2）比较操作符:  < 、 > 、 <= 、 >=、 ！= 、 ==
+   3）成员操作符： in  或 not in
+   4）逻辑运算符: and or  not
+
+6、python 数据类型也可以使用增强的赋值操作符（+=，-+），  使用增强赋值操作符的性能较好
+
+7、python 的int时不可变的
+
+8、输入和输出  
+   输出： python3  print()函数
+          python print 语句
+  
+   输入：input()
+	 raw_input()
+
+
+
+9、标准输入 标准输出 标准错误  sys.stdin  sys.stdout  sys.stderr
+
+10、- :表示左对齐，默认右对齐
+    
+
+>>> d = {'x':32,'y':27.9332,'z':65}
+>>> print ("%(x)-10d %(y)0.3g" %d)
+32         27.9
+>>> 
+注意：g,G 指数小于-4或更高精度时，使用%e 或 %E，否则使用%f
+
+11、每个python函数都有一个返回值，默认为None,  也可以使用return value 明确定义返回值
+
+12、callable()用于测试函数是否可调用  
+    callable(testFunc)
+
+13、同一行放置多个语句  ；以分号作为分隔符
+
+14、文档 Python允许通过__doc__动态获得文档字串
+    统一4个字符缩进
+15、主函数
+    1）最高级别的python语句（没有缩进）在模块被导入时就会执行，无论是否真的需要执行
+    2）__name__指示模块应该如何被加载
+      如果模块被导入，__name__的值就是模块名字
+      如果模块是直接执行，__name__的值就是"__main__"
+
+16、实例被创建后，其身份和类型不可改变
+    对象值可修改，称为可变对象 否则，不可变对象
+
+17、id()可返回一个对象的身份，即对象在内存中的位置
+    type()用于返回一个对象的类型
+
+18、内置类型：
+    数字：int  long  float  complex  bool 
+    序列：str Unicode list tuple  xrange
+    映射：dict
+    集合：set  frozense
+
+19、 list(s)  将字符串转为列表
+     tuple(s) 将字符串转为元组
+     set(s) 将字符串转为集合
+     frozenset 将字符串转为不可变集合
+     dict(d)  创建字典  其d 必须时（key,value）的元组序列
+
+
+20、
+    1、数字操作
+    x+y  x-y  x*y  x/y  
+    x//y(截断除法)  （导入精确除法后，若要执行截断除法）（from __future__ import division）  x**y  x%y  -x  -y
+
+    2、比较操作
+    x << y     x >> y    x & y   x | y    x ^ y  ~x
+
+
+
+21、序列的操作和方法
+    s[i]   s[i:j]  s[i:j:stride]  len(s)  min(s)  max(s)  sum(s)  all(s)  any(s)
+    
+    s[i] = v   s[i:j] = t   s[i:j:stride] = t   del s[i]  del s[i:j] del[i:j:stride]
+  
+22、可用于列表的方法
+   list(s)  将s转换为一个列表
+   s.append(x)  将一个新元素x追加到s末尾
+   s.extend(x)  将新的列表t追加到s末尾
+   s.count(x)   计算s中x出现的次数
+
+
