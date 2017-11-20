@@ -103,5 +103,7 @@ python笔记
    s.append(x)  将一个新元素x追加到s末尾
    s.extend(x)  将新的列表t追加到s末尾
    s.count(x)   计算s中x出现的次数
+   s.index(x,[start [, stop]]  当s[i] == x时，返回最小的i,可选择参数stop用于指定搜索的起始和结束索引
+   
 
 
