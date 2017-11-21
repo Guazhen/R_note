@@ -1,0 +1,7 @@
+第一章:
+第一节:
+   1．查看python的保留字
+	>>> from keyword import kwlist
+	>>> print kwlist
+   2. -*-coding:UTF-8 -*- 代码设置编码集为UTF-8，使python代码可以支持中文
+
