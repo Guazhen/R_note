@@ -8,3 +8,108 @@
 第二章：
 第一节：
 
+
+
+
+
+
+
+第21章：
+第一节：
+	1.进程和线程对比
+	进程：重量级（进程映像的结构，执行细节，进程间切换） （进程间通信，临界区，进程调度）
+	线程：轻量级（线程见共享资源，容易通信）（遇到问题：死锁，数据同步，实现复杂）
+	
+	python语言使用：全局解释器锁  和 队列模块，  不是线程安全
+	
+	2.python中对线程和进程的支持
+	  2.1
+	  与进程和线程相关的python模块
+	   os/sys		包含基本进程管理函数
+	   subprocess		python基本库中多进程相关模块
+	   signal		python基本库中信号相关模块
+	   threading		python基本库中线程相关模块
+	
+	  os/sys模块中与进程相关的函数
+	
+	   popen		生成新的进程
+	   system		直接生成字符串锁代表的进程
+	   abort/exit		终止进程
+	   exec家族		在现有进程环境下生成新进程
+
+	   2.2.1 获取当前环境变量中的PATH的值
+		>>> import os
+		>>> path = os.environ.get('PATH')
+		>>> print (path)
+		/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+	   2.2.2 获取当前进程所有环境变量的值
+		>>> import os
+		>>> for key in os.environ.keys():
+		...     print (key,'\t',os.environ[key])
+
+	   2.2.3 修改已有或新生成一个环境变量的值
+		>>> import os
+		>>> os.environ['key']='value'
+		>>> 
+
+
+
+	   2.2 创建进程
+	    2.2.1 system
+		system(command)
+		
+		import os
+		print os.system('ls')
+
+	    2.2.2 exec家族函数
+		excel   excele  excelp excelpe  execv  execve  execvp  execvpe
+	        exec函数在执行命令之后，将会接管python进程，而不会返回给python进程，如果出错将触发异常
+		例子：
+			>>> import os
+			>>> os.execl('/bin/ls','ls')
+			pypjt  pytest
+			>>> os.execl('/bin/lsa','lsa') #抛出异常
+			-bash: syntax error near unexpected token `'/bin/lsa','lsa''
+			
+
+	    2.2.3 进程终止
+		1.sys.exit函数  --->“温和”的终止方式，在程序退出之前会执行一些清理操作，同时返回值给调用进程
+			>>> import sys
+			>>> try:
+			...     filename = sys.argv[1]
+			...     print (filename)
+			... except:
+			...     print ("Usage:",sys.argv[0],"filename")
+			...     sys.exit(1)
+			... 
+			Usage:  filename
+
+		2.os.abort函数--->“暴力”退出方式，直接给进程发送终止信号
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
