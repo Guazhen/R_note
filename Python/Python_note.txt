@@ -188,3 +188,61 @@ python笔记
 	('x', [2, 2, 3], 'x', [2, 2, 3])
 
 	v1, v2, ...., vn  = s   变量解包
+
+	序列操作符
+	x in s, x not in s    #从属关系
+	for x in s:				#迭代
+	all(s) 					#如果s中所有项都为true，则返回true
+	any(s)					#如果s中任意项为true,则返回true
+	len(s)					#长度
+	min(s)					#s中的最小项
+	max(s)					#s中最大项
+	sum(s[,initial])   具有可选初始值的项的和
+	
+列表类型支持的操作
+	1.s[i] = x  索引赋值
+	
+	2.>>> d1.copy()  #深拷贝
+	{'x': 32, 'y': [1, 2, 3, 4]}
+	>>> d3 = d1.copy()
+	>>> d2 = d1  #浅拷贝
+	
+	>>> d1.get('z')  #不投出异常
+	>>> g1['z']   #投出异常
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	NameError: name 'g1' is not defined
+	>>> 
+
+
+	
+	3.>>> d1.items()  #返回元组
+	dict_items([('x', 32), ('y', [1, 2, 3, 4])])
+	>>> t1,t2 = d1.items()  #变量解包
+	>>> print (t1)
+	('x', 32)
+	>>> print (t2)
+	('y', [1, 2, 3, 4])
+	>>> 
+
+	注意：解包元素必须相等
+	
+	4.>>> d1.pop('x')  #弹出指定元素的值
+	32
+	>>> print (d1)
+	{'y': [1, 2, 3, 4]}
+	>>> d2 = {'x':1,'y':2,'z':3}
+	>>> d2.popitem()  #随机弹出键值
+	('z', 3)
+	>>> d2.popitem()
+	('x', 1)
+	>>> 
+
+	5.>>> d1 = {'x':1,'y':2}
+	>>> d2 = {'m':21,'n':76,'y':44}
+	>>> d1.update(d2)   #合并字典
+	>>> print(d1)
+	{'m': 21, 'n': 76, 'x': 1, 'y': 44}  #如果键相同，会修改原来的键值
+	>>> 
+
+	
