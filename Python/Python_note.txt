@@ -104,6 +104,33 @@ python笔记
    s.extend(x)  将新的列表t追加到s末尾
    s.count(x)   计算s中x出现的次数
    s.index(x,[start [, stop]]  当s[i] == x时，返回最小的i,可选择参数stop用于指定搜索的起始和结束索引
+   s.insert(i,x)  在索引i处插入x
+   s.pop(i)  返回元素i并从列表中移除它，如果省略i,则返回列表
+             最后一个元素
+	
+	s.remove(x)   搜索x并从s中移除它
+	s.reverse()   颠倒s中所有元素的顺序
+	s.sort(key)  
+	例如：  以列表内元素的长度来排序
+	        >>> x = ['hello','abc','iplaypython.com']
+			>>> x.sort(key=len)
+			>>> x
+			['abc', 'hello', 'iplaypython.com']
+			
+字符串操作：
+	字节字符串：字节序列
+	unicode字符串：unicode字符序列
+	s.captitalize()   首字符变大写
+	s.index(sub[,start[,end]])  子字符串sub首次出现的位置
+	
+   
+   
+   
+   
+   
+   
+   
+   
    
 
 
