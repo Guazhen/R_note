@@ -28,6 +28,12 @@ python笔记
 6、python 数据类型也可以使用增强的赋值操作符（+=，-+），  使用增强赋值操作符的性能较好
 
 7、python 的int时不可变的
+	例如：  >>> x = 1  
+		>>> id(x)  
+		31106520  
+		>>> y = 1  
+		>>> id(y)  
+		31106520  
 
 8、输入和输出  
    输出： python3  print()函数
@@ -36,9 +42,19 @@ python笔记
    输入：input()
 	 raw_input()
 
+	1.以下两行在事实上等价：
+	sys.stdout.write('hello'+'\n') 
+	print 'hello'
 
+	2.以下两组在事实上等价：
+	hi=raw_input('hello? ') 
+	print 'hello? ', #comma to stay in the same line 
+	hi=sys.stdin.readline()[:-1] # -1 to discard the '\n' in input stream
 
-9、标准输入 标准输出 标准错误  sys.stdin  sys.stdout  sys.stderr
+9、标准输入 标准输出 标准错误：
+	sys.stdin,sys.stdout,sys.stderr: stdin , stdout , 以及stderr 变量包含与标准I/O 流对应的流对象  
+	如果需要更好地控制输出,而print 不能满足你的要求, 它们就是你所需要的
+	sys.stdin  sys.stdout  sys.stderr
 
 10、- :表示左对齐，默认右对齐
     
@@ -74,7 +90,8 @@ python笔记
     数字：int  long  float  complex  bool 
     序列：str Unicode list tuple  xrange
     映射：dict
-    集合：set  frozense
+    集合：set(set无序排序且不重复，是可变的，有add（），remove（）等方法。既然是可变的，所以它不存在哈希值)
+	  frozenset(frozenset是冻结的集合，它是不可变的，存在哈希值)
 
 19、 list(s)  将字符串转为列表
      tuple(s) 将字符串转为元组
