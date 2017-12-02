@@ -263,3 +263,50 @@ python笔记
 	>>> 
 
 	
+	6. 
+	>>> d1 = {'x':1,'y':2}
+	>>> d2 = {'m':21,'n':76,'y':44}
+	>>> d1.update(d2)
+	>>> for i in il1:
+	...     print(i)
+	... 
+	('y', 44)
+	('n', 76)
+	('m', 21)
+	('x', 1)
+
+	7.
+	>>> zip('xyz','123')
+	<zip object at 0x7fca7fcc7bc8>
+	>>> list(zi1)  #需要使用list()强制转换了
+	[('x', '1'), ('y', '2'), ('z', '3')]
+	
+	8. 集合类型的方法和操作
+	len(s)   			#返回s中项目数
+	s.copy() 			#制作s的一份副本
+	s.difference(t) 	#求差集，返回所有在s中，但不在t中的项目
+	s.intersection(t) 	#求交集，返回所有同时在s和t中的项目
+	s.isdisjoint(t)		#如果s和t没有相同项，则返回True
+	s.issubset(t)		#如果s和t的一个子集，则返回True
+	s.issuperset(t)		#如果s是t的一个超集，则返回True
+	s.symmetric_difference(t) #求对称差集，返回所有在s或t中，但又不同时在这两个集合中的项
+	
+	s.union(t)			#求并集，返回所有在s或t中的项
+	
+	集合操作
+	s | t  		# s和t的并集
+	s & t1		# s和t的交集
+	s - t 		# 求差集
+	len(s)		# 集合中项数
+	max(s)		# 最大值
+	min(s)		# 最小值
+	
+	9.计数器的引用计数
+	sys.getrefcount(a)  
+	
+	10.
+	
+	
+	
+	
+	
